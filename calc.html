@@ -1,34 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="calculator">
-        <input type="text" id="display" readonly>
-        <div class="keys">
-            <button onclick="addToDisplay('7')">7</button>
-            <button onclick="addToDisplay('8')">8</button>
-            <button onclick="addToDisplay('9')">9</button>
-            <button onclick="addToDisplay('+')">+</button>
-            <button onclick="addToDisplay('4')">4</button>
-            <button onclick="addToDisplay('5')">5</button>
-            <button onclick="addToDisplay('6')">6</button>
-            <button onclick="addToDisplay('-')">-</button>
-            <button onclick="addToDisplay('1')">1</button>
-            <button onclick="addToDisplay('2')">2</button>
-            <button onclick="addToDisplay('3')">3</button>
-            <button onclick="addToDisplay('*')">*</button>
-            <button onclick="addToDisplay('0')">0</button>
-            <button onclick="clearDisplay()">C</button>
-            <button onclick="calculate()">=</button>
-            <button onclick="addToDisplay('/')">/</button>
-        </div>
-    </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <script src="script.js"></script>
-</body>
+    <link href="calc.css" rel="stylesheet">
+    <script src="calc.js"></script>    
+
+    <title>Calculator!</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="4"><button id="result">0</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="add('1')">1</button></td>
+        <td><button onclick="add('2')">2</button></td>
+        <td><button onclick="add('3')">3</button></td>
+        <td><button onclick="add('+')">+</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="add('4')">4</button></td>
+        <td><button onclick="add('5')">5</button></td>
+        <td><button onclick="add('6')">6</button></td>
+        <td><button onclick="add('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="add('7')">7</button></td>
+        <td><button onclick="add('8')">8</button></td>
+        <td><button onclick="add('9')">9</button></td>
+        <td><button onclick="add('*')">*</button></td>
+      </tr>
+      <tr>
+        <td colspan="3"><button onclick="add('0')">0</button></td>
+        <td colspan="3"><button onclick="add('/')">/</button></td>          
+      </tr>
+      <tr>
+        <td colspan="2"><button onclick="del()" class="ac">AC</button></td>
+        <td><button onclick="add('.')">.</button></td>
+        <td><button onclick="calc()">=</button></td>            
+      </tr>
+    </table>
+  </body>
 </html>
