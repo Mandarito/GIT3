@@ -1,13 +1,22 @@
-function addToDisplay(value) {
-    document.getElementById('display').value += value;
+function setResult(value) {
+    document.getElementById('result').innerHTML = value;
 }
 
-function clearDisplay() {
-    document.getElementById('display').value = '';
+function getResult() {
+    return(document.getElementById('result').innerHTML);
 }
 
-function calculate() {
-    let displayValue = document.getElementById('display').value;
-    let result = eval(displayValue); // Using eval for simplicity (not recommended for production)
-    document.getElementById('display').value = result;
+function add(key) { 
+    var result = getResult();
+    if (result!='0' || isNaN(key)) setResult(result + key);
+    else setResult(key);
+}
+
+function calc() {
+    var result = eval(getResult()); 
+    setResult(result);
+}
+
+function del() { 
+    setResult(0);
 }
